@@ -1,0 +1,6 @@
+{
+    "name": "Svelte dectector",
+    "description": "A browser extension that detects the use of Svelte.",
+    "version": "1.0",
+    "manifest_version": 3
+  }
