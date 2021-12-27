@@ -86,7 +86,7 @@ export default [
       format: "iife",
       file: "public/service-worker.js",
     },
-    plugins: [resolve(), commonjs()],
+    plugins: [resolve(), commonjs(), terser()],
     watch: {
       clearScreen: false,
     },
