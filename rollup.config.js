@@ -34,7 +34,7 @@ function serve() {
 
 export default [
   {
-    input: "src/main.js",
+    input: "src/app/main.js",
     output: {
       sourcemap: true,
       format: "iife",
@@ -80,7 +80,7 @@ export default [
     },
   },
   {
-    input: "src/service-worker.js",
+    input: "src/background/service-worker.js",
     output: {
       sourcemap: false,
       format: "iife",
