@@ -37,15 +37,14 @@ const detectSvelteUsage = () => {
         chrome.storage.sync.get(
           "nbSvelteSnowflakes",
           ({ nbSvelteSnowflakes }) => {
-            console.warn("dlkfrdlgk");
             for (let i = 0; i < nbSvelteSnowflakes; i++) {
               const snowflake = document.createElement("div");
               const inner = getSvelteSnowflakeContent();
-              const style = getSvelteSnowflakeStyle();
+              const { animationDuration, css } = getSvelteSnowflakeStyle();
               snowflake.innerHTML = inner;
-              snowflake.style = style;
+              snowflake.style = css;
               document.body.appendChild(snowflake);
-              setTimeout(() => snowflake.remove(), 1300);
+              setTimeout(() => snowflake.remove(), animationDuration);
             }
           }
         );

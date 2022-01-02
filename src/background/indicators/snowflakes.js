@@ -34,17 +34,23 @@ const getSvelteSnowflakeContent = () => {
 /**
  * Returns the style of a svelte snowflake.
  * It randomize the starting position, the animation (snow falling) duration and delay.
- * @returns The CSS style of the svelte snowflake.
+ * @returns {{animationDuration, css}} The CSS style of the svelte snowflake and the total animation duration (in ms).
  */
 const getSvelteSnowflakeStyle = () => {
-  return `
+  // It doesnt work with let or const ... why ?!
+  var delay = `0.${Math.floor(Math.random() * 300)}`;
+  var duration = `1.${Math.floor(Math.random() * 3)}`;
+  return {
+    animationDuration: (parseFloat(delay) + parseFloat(duration)) * 1000,
+    css: `
       position: fixed;
       z-index: 99999;
       top: -30px;
       left: ${Math.floor(Math.random() * 100)}vw;
-      animation: drop 1.${Math.floor(Math.random() * 3)}s linear infinite;
-      animation-delay: 0.${Math.floor(Math.random() * 300)}s;
-      `;
+      animation: drop ${duration}s linear infinite;
+      animation-delay: ${delay}s;
+      `,
+  };
 };
 
 export {
