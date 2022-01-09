@@ -10,3 +10,20 @@
 </p>
 
 A browser extension to detect the use of Svelte in a website.
+
+## Author
+
+👤 **Anthony Le Goas**
+
+- Twitter: [@anthony_legoas](https://twitter.com/anthony_legoas)
+- Github: [@anthonylegoas](https://github.com/anthonylegoas)
+- LinkedIn: [@anthonylegoas](https://linkedin.com/in/anthonylegoas)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+Copyright © 2022 [Anthony Le Goas](https://github.com/anthonylegoas).<br />
+This project is [MIT](https://github.com/anthonylegoas/svelte-detector/blob/master/LICENCE) licensed.
