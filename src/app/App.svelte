@@ -2,7 +2,7 @@
 </script>
 
 <main>
-  <a href="https://github.com/anthonylegoas/svelte-detector" target="_blank"
+  <a href="https://github.com/anthonylegoas/is-this-svelte" target="_blank"
     >More about the extension</a
   >
 </main>

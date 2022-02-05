@@ -1,6 +1,6 @@
-<h1 align="center">Welcome to svelte-detector 👋</h1>
+<h1 align="center">Welcome to is-this-svelte 👋</h1>
 <p>
-  <a href="https://github.com/anthonylegoas/svelte-detector/blob/master/LICENCE" target="_blank">
+  <a href="https://github.com/anthonylegoas/is-this-svelte/blob/master/LICENCE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
   <a href=".github/workflows/ci.yml">
@@ -25,9 +25,9 @@ Give a ⭐️ if you like this project!
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/anthonylegoas/svelte-detector/issues). You can also take a look at the [contributing guide](https://github.com/anthonylegoas/svelte-detector/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/anthonylegoas/is-this-svelte/issues). You can also take a look at the [contributing guide](https://github.com/anthonylegoas/is-this-svelte/blob/master/CONTRIBUTING.md).
 
 ## 📝 License
 
 Copyright © 2022 [Anthony Le Goas](https://github.com/anthonylegoas).<br />
-This project is [MIT](https://github.com/anthonylegoas/svelte-detector/blob/master/LICENCE) licensed.
+This project is [MIT](https://github.com/anthonylegoas/is-this-svelte/blob/master/LICENCE) licensed.
