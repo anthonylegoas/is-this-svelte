@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to svelte-detector contribution guide 👋</h1>
+<h1 align="center">Welcome to is-this-svelte contribution guide 👋</h1>
 
 ## New contributor guide
 
