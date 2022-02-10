@@ -1,10 +1,10 @@
+import { documentUseSvelte } from "./detection/svelte-detection";
 import {
   defaultNbSvelteSnowflakes,
   getSvelteSnowflakeContent,
   getSvelteSnowflakeStyle,
   snowflakesIndicatorName,
 } from "./indicators/snowflakes";
-import { documentUseSvelte } from "./svelte-detection";
 
 chrome.runtime.onInstalled.addListener(() =>
   chrome.storage.sync.set({
