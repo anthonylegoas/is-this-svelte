@@ -1,10 +1,11 @@
 <script>
+  import { Link } from './cdk';
 </script>
 
 <main>
-  <a href="https://github.com/anthonylegoas/is-this-svelte" target="_blank"
-    >More about the extension</a
-  >
+  <Link href="https://github.com/anthonylegoas/is-this-svelte">
+    More about the extension
+  </Link>
 </main>
 
 <style>
