@@ -1,7 +1,9 @@
 <script>
   import { Link } from './cdk';
+  import Header from './header/Header.svelte'
 </script>
 
+<Header/>
 <main>
   <Link href="https://github.com/anthonylegoas/is-this-svelte">
     More about the extension
