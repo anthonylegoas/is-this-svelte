@@ -1,4 +1,4 @@
-<img src="/images/svelte-logo.svg" alt=""/>
+<img src="/images/is-this-svelte.png" alt=""/>
 
 <style>
     img {
