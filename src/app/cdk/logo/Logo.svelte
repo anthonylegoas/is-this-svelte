@@ -2,8 +2,9 @@
 
 <style>
     img {
-        height: 100px;
-        width: 100px;
+        height: 75px;
+        width: 75px;
+        margin: .5rem 0;
     }
 </style>
 
