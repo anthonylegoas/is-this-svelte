@@ -1,15 +1,19 @@
 <script>
   import { Link } from './cdk';
+  import ConfigForm from './config/ConfigForm.svelte'
   import Header from './header/Header.svelte'
 </script>
 
 <main>
   <Header/>
   <section>
+    <ConfigForm/>
+  </section>
+  <footer>
     <Link href="https://github.com/anthonylegoas/is-this-svelte">
       More about the extension
     </Link>
-  </section>
+  </footer>
 </main>
 
 <style>
@@ -21,9 +25,17 @@
     align-items: center;
   }
 
-  section {
+  section, footer {
     width: 100%;
     border-top: 1px solid #ddd;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  footer {
+    border-top: none;
+  }
+
 </style>
