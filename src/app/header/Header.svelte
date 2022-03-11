@@ -1,5 +1,5 @@
 <script>
-    import { Button, Logo } from '../cdk';
+    import { Button, Logo } from '../../cdk';
 
     const websiteUsesSvelte = true;
     $: usageText = `This website does ${websiteUsesSvelte ? '' : 'not'} use Svelte ${websiteUsesSvelte ? '😃' : '😭'}`;

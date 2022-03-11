@@ -1,5 +1,5 @@
 <script>
-  import { Link } from './cdk';
+  import { Link } from '../cdk';
   import ConfigForm from './config/ConfigForm.svelte'
   import Header from './header/Header.svelte'
 </script>
