@@ -8,7 +8,7 @@ import {
 
 chrome.runtime.onInstalled.addListener(() =>
   chrome.storage.sync.set({
-    currentWebsiteUsesSvelte: false,
+    websiteUsesSvelte: false,
     selectedIndicator: snowflakesIndicatorName,
     nbSvelteSnowflakes: defaultNbSvelteSnowflakes,
   })
@@ -30,7 +30,7 @@ const detectSvelteUsage = () => {
   // Detect if svelte is used in the loaded document.
   if (documentUseSvelte(document)) {
     // Indicate that Svelte is used.
-    chrome.storage.sync.set({ currentWebsiteUsesSvelte: true });
+    chrome.storage.sync.set({ websiteUsesSvelte: true });
     // Get the selected indicator to inform of the svelte usage.
     chrome.storage.sync.get("selectedIndicator", ({ selectedIndicator }) => {
       // Check if the snowflakes indicator is selected.
@@ -53,5 +53,7 @@ const detectSvelteUsage = () => {
         );
       }
     });
+  } else {
+    chrome.storage.sync.set({ websiteUsesSvelte: false });
   }
 };

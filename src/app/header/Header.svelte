@@ -1,8 +1,8 @@
 <script>
     import { Button, Logo } from '../../cdk';
+    import { currentWebsiteUsesSvelte } from '../../store';
 
-    const websiteUsesSvelte = true;
-    $: usageText = `This website does ${websiteUsesSvelte ? '' : 'not'} use Svelte ${websiteUsesSvelte ? '😃' : '😭'}`;
+    $: usageText = `This website does ${$currentWebsiteUsesSvelte ? '' : 'not'} use Svelte ${$currentWebsiteUsesSvelte ? '😃' : '😭'}`;
 </script>
 
 <header>
@@ -21,5 +21,6 @@
     p.usage-text {
         font-size: 0.825rem;
         color: var(--color-second);
+        text-align: center;
     }
 </style>
