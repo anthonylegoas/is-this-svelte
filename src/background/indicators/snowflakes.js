@@ -15,15 +15,11 @@ const getSvelteSnowflakeContent = () => {
       <style>
         @keyframes drop {
           0% {
-            transform: translateY(0);
+            transform: translate3d(var(--left-ini), 0, 0);
             opacity: 1;
           }
-          80% {
-            transform: translateY(80vh);
-            opacity: 0.8;
-          }
           100% {
-            transform: translateY(100vh);
+            transform: translate3d(var(--left-end), 110vh, 0);
             opacity: 0;
           }
         }
@@ -40,9 +36,14 @@ const getSvelteSnowflakeStyle = () => {
   // It doesnt work with let or const ... why ?!
   var delay = `0.${Math.floor(Math.random() * 300)}`;
   var duration = `1.${Math.floor(Math.random() * 3)}`;
+  var xPosStart = Math.random() * 100 - 10;
+  var xPosEnd = xPosStart + 10 * (Math.random() < 0.5 ? 1 : -1);
+
   return {
     animationDuration: (parseFloat(delay) + parseFloat(duration)) * 1000,
     css: `
+      --left-ini: ${xPosStart}vw;
+      --left-end: ${xPosEnd}vw;
       position: fixed;
       z-index: 99999;
       top: -30px;
