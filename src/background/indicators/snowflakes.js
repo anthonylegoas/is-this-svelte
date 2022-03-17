@@ -1,7 +1,7 @@
 const snowflakesIndicatorName = "snowflakes";
 
 // The default number of svelte icons to make snow.
-const defaultNbSvelteSnowflakes = 20;
+const defaultNbSvelteSnowflakes = 30;
 
 /**
  * Returns the content of a svelte snowflake as HTML code.
@@ -19,7 +19,7 @@ const getSvelteSnowflakeContent = () => {
             opacity: 1;
           }
           100% {
-            transform: translate3d(var(--left-end), 110vh, 0);
+            transform: translate3d(var(--left-end), 100vh, 0);
             opacity: 0;
           }
         }
@@ -36,7 +36,7 @@ const getSvelteSnowflakeStyle = () => {
   // It doesnt work with let or const ... why ?!
   var delay = `0.${Math.floor(Math.random() * 300)}`;
   var duration = `1.${Math.floor(Math.random() * 3)}`;
-  var xPosStart = Math.random() * 100 - 10;
+  var xPosStart = Math.random() * 100;
   var xPosEnd = xPosStart + 10 * (Math.random() < 0.5 ? 1 : -1);
 
   return {
