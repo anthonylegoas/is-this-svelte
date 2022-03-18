@@ -1,5 +1,5 @@
 <script>
-    import { Button, Logo } from '../../cdk';
+    import { Logo } from '../../cdk';
     import { currentWebsiteUsesSvelte } from '../../store';
 
     $: usageText = `This website does ${$currentWebsiteUsesSvelte ? '' : 'not'} use Svelte ${$currentWebsiteUsesSvelte ? '😃' : '😭'}`;
@@ -7,7 +7,6 @@
 
 <header>
     <Logo />
-    <Button>Analyze website</Button>
     <p class="usage-text">{usageText}</p>
 </header>
 
