@@ -1,10 +1,10 @@
 <script>
-    $: iconNumber = 20;
+    import { nbSvelteSnowflakes } from '../../store'
 </script>
 
 <p>Configure the animation when Svelte is detected.</p>
-<label> Icons number ({iconNumber}):
-    <input name="taille" type="range" min="1" max="50" step="1" bind:value={iconNumber} />
+<label> Icons number ({$nbSvelteSnowflakes}):
+    <input name="taille" type="range" min="1" max="50" step="1" bind:value={$nbSvelteSnowflakes} />
 </label>
 
 <style>
