@@ -1,5 +1,6 @@
 import { writable } from "svelte/store";
 
+const currentTabId = writable(null);
 const currentWebsiteUsesSvelte = writable(false);
 const nbSvelteSnowflakes = writable(20);
 
@@ -17,4 +18,12 @@ chrome.storage?.sync.get(
   }
 );
 
-export { currentWebsiteUsesSvelte, nbSvelteSnowflakes };
+chrome.storage?.sync.get("nbSvelteSnowflakes", ({ currentTabId: value }) => {
+  currentTabId.set(value);
+});
+
+nbSvelteSnowflakes.subscribe((nb) => {
+  chrome.storage?.sync.set({ nbSvelteSnowflakes: nb });
+});
+
+export { currentTabId, currentWebsiteUsesSvelte, nbSvelteSnowflakes };
