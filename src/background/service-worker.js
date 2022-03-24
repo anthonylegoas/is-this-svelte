@@ -13,9 +13,12 @@ chrome.runtime.onInstalled.addListener(() =>
     nbSvelteSnowflakes: defaultNbSvelteSnowflakes,
   })
 );
+
 chrome.webNavigation.onCompleted.addListener(() =>
   webNavigationCompletedHandler()
 );
+
+chrome.tabs.onActivated.addListener(() => tabsActivatedHandler());
 
 const webNavigationCompletedHandler = async () => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -26,6 +29,24 @@ const webNavigationCompletedHandler = async () => {
   });
 };
 
+const tabsActivatedHandler = async () => {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: detectSvelteUsage,
+    // function: detectSvelteUsageWithoutAnimation,
+  });
+};
+
+const detectSvelteUsageWithoutAnimation = () => {
+  if (documentUseSvelte(document)) {
+    chrome.storage.sync.set({ websiteUsesSvelte: true });
+  } else {
+    chrome.storage.sync.set({ websiteUsesSvelte: false });
+  }
+};
+
 const detectSvelteUsage = () => {
   // Detect if svelte is used in the loaded document.
   if (documentUseSvelte(document)) {
@@ -34,7 +55,7 @@ const detectSvelteUsage = () => {
     // Get the selected indicator to inform of the svelte usage.
     chrome.storage.sync.get("selectedIndicator", ({ selectedIndicator }) => {
       // Check if the snowflakes indicator is selected.
-      // @todo find why it doesn't with "selectedIndicator === snowflakesIndicatorName" :thinking:
+      // @todo find why it doesn't work with "selectedIndicator === snowflakesIndicatorName" :thinking:
       if (selectedIndicator === "snowflakes") {
         // Display it.
         chrome.storage.sync.get(
