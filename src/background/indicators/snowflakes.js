@@ -19,7 +19,7 @@ const getSvelteSnowflakeContent = () => {
             opacity: 1;
           }
           100% {
-            transform: translate3d(var(--left-end), 100vh, 0);
+            transform: translate3d(var(--left-end), 120vh, 0);
             opacity: 0;
           }
         }
@@ -36,7 +36,7 @@ const getSvelteSnowflakeStyle = () => {
   // It doesnt work with let or const ... why ?!
   var delay = `0.${Math.floor(Math.random() * 300)}`;
   var duration = `1.${Math.floor(Math.random() * 3)}`;
-  var xPosStart = Math.random() * 100;
+  var xPosStart = Math.floor(Math.random() * 100);
   var xPosEnd = xPosStart + 10 * (Math.random() < 0.5 ? 1 : -1);
 
   return {
