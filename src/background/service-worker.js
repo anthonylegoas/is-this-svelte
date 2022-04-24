@@ -1,4 +1,5 @@
 import { documentUseSvelte } from "./detection/svelte-detection";
+import { notificationIndicatorName } from "./indicators/notification";
 import {
   defaultNbSvelteSnowflakes,
   getSvelteSnowflakeContent,
@@ -73,6 +74,14 @@ const detectSvelteUsage = () => {
           }
         );
       }
+      else if(selectedIndicator === "notification") {
+        chrome.notifications.create(notificationIndicatorName, {
+          type: "basic",
+          iconUrl: "icons/icon-128.png",
+          title: "Svelte is used!",
+          message: "You can now use the snowflakes indicator.",
+        });
+      } 
     });
   } else {
     chrome.storage.sync.set({ websiteUsesSvelte: false });
