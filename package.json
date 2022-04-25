@@ -5,6 +5,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "test": "jest src",
     "start": "sirv public --no-clear"
   },
   "devDependencies": {
