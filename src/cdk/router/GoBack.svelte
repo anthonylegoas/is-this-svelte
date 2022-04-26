@@ -1,5 +1,5 @@
-<script lang="ts">
-	import { goBack } from '$lib/stores';
+<script>
+	import { goBack } from './router.store'
 
 	const buttonClickHandler = () => goBack();
 </script>

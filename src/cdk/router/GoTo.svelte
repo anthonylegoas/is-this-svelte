@@ -1,15 +1,14 @@
-<script lang="ts">
-	import { goTo } from '$lib/stores';
-	import type { RouteDirection, RoutePath } from '$lib/stores';
+<script>
+	import {goTo } from './router.store'
 
 	/**
 	 * Indicates the direction of the navigation animation.
 	 */
-	export let comesFrom: RouteDirection = 'right';
+	export let comesFrom = 'right';
 	/**
 	 * The route on which to nagivate.
 	 */
-	export let to: RoutePath;
+	export let to;
 
 	const buttonClickHandler = () => goTo(to, comesFrom);
 </script>
