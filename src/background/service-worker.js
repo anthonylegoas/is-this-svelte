@@ -1,5 +1,4 @@
 import { documentUseSvelte } from "./detection/svelte-detection";
-import { notificationIndicatorName } from "./indicators/notification";
 import {
   defaultNbSvelteSnowflakes,
   getSvelteSnowflakeContent,
@@ -48,41 +47,30 @@ const detectSvelteUsageWithoutAnimation = () => {
   }
 };
 
-const detectSvelteUsage = () => {
+const detectSvelteUsage = async () => {
   // Detect if svelte is used in the loaded document.
   if (documentUseSvelte(document)) {
     // Indicate that Svelte is used.
     chrome.storage.sync.set({ websiteUsesSvelte: true });
+    
     // Get the selected indicator to inform of the svelte usage.
-    chrome.storage.sync.get("selectedIndicator", ({ selectedIndicator }) => {
-      // Check if the snowflakes indicator is selected.
-      // @todo find why it doesn't work with "selectedIndicator === snowflakesIndicatorName" :thinking:
-      if (selectedIndicator === "snowflakes") {
-        // Display it.
-        chrome.storage.sync.get(
-          "nbSvelteSnowflakes",
-          ({ nbSvelteSnowflakes }) => {
-            for (let i = 0; i < nbSvelteSnowflakes; i++) {
-              const snowflake = document.createElement("div");
-              const inner = getSvelteSnowflakeContent();
-              const { animationDuration, css } = getSvelteSnowflakeStyle();
-              snowflake.innerHTML = inner;
-              snowflake.style = css;
-              document.body.appendChild(snowflake);
-              setTimeout(() => snowflake.remove(), animationDuration);
-            }
-          }
-        );
+    const { selectedIndicator } = await chrome.storage.sync.get("selectedIndicator");
+
+    // Check if the snowflakes indicator is selected.
+    // @todo find why it doesn't work with "selectedIndicator === snowflakesIndicatorName" :thinking:
+    if (selectedIndicator === "snowflakes") {
+      // Display it.
+      const { nbSvelteSnowflakes } = await chrome.storage.sync.get("nbSvelteSnowflakes"); 
+      for (let i = 0; i < nbSvelteSnowflakes; i++) {
+        const snowflake = document.createElement("div");
+        const inner = getSvelteSnowflakeContent();
+        const { animationDuration, css } = getSvelteSnowflakeStyle();
+        snowflake.innerHTML = inner;
+        snowflake.style = css;
+        document.body.appendChild(snowflake);
+        setTimeout(() => snowflake.remove(), animationDuration);
       }
-      else if(selectedIndicator === "notification") {
-        chrome.notifications.create(notificationIndicatorName, {
-          type: "basic",
-          iconUrl: "icons/icon-128.png",
-          title: "Svelte is used!",
-          message: "You can now use the snowflakes indicator.",
-        });
-      } 
-    });
+    }
   } else {
     chrome.storage.sync.set({ websiteUsesSvelte: false });
   }
