@@ -1,4 +1,4 @@
-<button on:click><slot/></button>
+<button on:click {...$$restProps}><slot/></button>
 
 <style>
     button {
