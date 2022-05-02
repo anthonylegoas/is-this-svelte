@@ -1,7 +1,9 @@
 <script>
-    import { nbSvelteSnowflakes } from '../../store'
+    import { GoBack } from '../../cdk';
+    import { nbSvelteSnowflakes } from '../../store';
 </script>
 
+<GoBack />
 <p>Configure the animation when Svelte is detected.</p>
 <label> Icons number ({$nbSvelteSnowflakes}):
     <input name="taille" type="range" min="1" max="50" step="1" bind:value={$nbSvelteSnowflakes} />
