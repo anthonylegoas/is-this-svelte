@@ -1,12 +1,10 @@
 <script>
-    import { Link } from '../../cdk'
+    
 </script>
 
 <footer>
-    <Link href="https://github.com/anthonylegoas/is-this-svelte">
-      More about the extension
-    </Link>
-  </footer>
+  
+</footer>
 
 <style>
     footer {
