@@ -1,7 +1,12 @@
 import { derived, writable } from "svelte/store";
 
 // Stacks all visited routes.
-const history = writable([]);
+const history = writable([
+  {
+    path: "home",
+    comesFrom: "right",
+  },
+]);
 
 // Returns the latest visited route from the history.
 const currentRoute = derived(history, ($history) => $history.slice(-1)[0]);
@@ -15,6 +20,8 @@ const goTo = (path, comesFrom = "right") =>
   history.update((value) => {
     return [...value, { path, comesFrom }];
   });
+
+const routePath = ["home", "config", "about"];
 
 /**
  * Allow to navigate to the route before current one.
