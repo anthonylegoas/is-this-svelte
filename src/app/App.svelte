@@ -1,13 +1,18 @@
 <script>
-  import ConfigForm from './config/ConfigForm.svelte'
-  import Footer from './footer/Footer.svelte'
-  import Header from './header/Header.svelte'
+  import Actions from './actions/Actions.svelte';
+  import ConfigForm from './config/ConfigForm.svelte';
+  import Footer from './footer/Footer.svelte';
+  import Header from './header/Header.svelte';
+  import { Router, Route } from '../cdk';
 </script>
 
 <main>
   <Header/>
   <section>
-    <ConfigForm/>
+    <Router>
+      <Route component={Actions} pattern="home"/>
+      <Route component={ConfigForm} pattern="config"/>
+    </Router>
   </section>
   <Footer/>
 </main>
