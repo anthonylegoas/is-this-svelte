@@ -1,5 +1,5 @@
 <script>
-	import {goTo } from './router.store'
+	import { goTo } from './router.store';
 
 	/**
 	 * Indicates the direction of the navigation animation.
@@ -14,7 +14,6 @@
 </script>
 
 <button
-	class="goto-button mobile:vtmn-w-full"
 	on:click={buttonClickHandler}
 	data-testid="go-to__button"
 	{...$$restProps}
@@ -23,13 +22,20 @@
 </button>
 
 <style>
-	:global(.goto-button) {
-		margin: 0 auto;
-	}
+    button {
+		width: 100%;
+        background-color: #fff;
+		border: none;
+        color: var(--color-primary);
+        font-size: 0.75rem;
+        max-width: 15em;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
 
-	@media (max-width: 599px) {
-		:global(.goto-button) {
-			width: 100%;
-		}
-	}
+    button:hover {
+        text-decoration: underline;
+    }
 </style>
