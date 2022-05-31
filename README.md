@@ -18,6 +18,7 @@ A browser extension to detect the use of Svelte in a website.
 - Twitter: [@anthony_legoas](https://twitter.com/anthony_legoas)
 - Github: [@anthonylegoas](https://github.com/anthonylegoas)
 - LinkedIn: [@anthonylegoas](https://linkedin.com/in/anthonylegoas)
+- Dev.to: [@anthony_legoas](https://dev.to/anthony_legoas)
 
 ## Show your support
 
