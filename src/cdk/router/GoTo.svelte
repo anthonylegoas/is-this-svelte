@@ -1,5 +1,6 @@
 <script>
 	import { goTo } from './router.store';
+	import Icon from '../icon/Icon.svelte'
 
 	/**
 	 * Indicates the direction of the navigation animation.
@@ -19,6 +20,7 @@
 	{...$$restProps}
 >
 	<slot />
+	<Icon name="chevron-right" size="30"/>
 </button>
 
 <style>
@@ -33,6 +35,10 @@
         border-radius: 4px;
         transition: all 0.2s ease-in-out;
         cursor: pointer;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
     }
 
     button:hover {
