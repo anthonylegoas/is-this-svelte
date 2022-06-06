@@ -1,4 +1,5 @@
 <script>
+  import About from './about/About.svelte';
   import Actions from './actions/Actions.svelte';
   import ConfigForm from './config/ConfigForm.svelte';
   import Footer from './footer/Footer.svelte';
@@ -12,6 +13,7 @@
     <Router>
       <Route component={Actions} pattern="home"/>
       <Route component={ConfigForm} pattern="config"/>
+      <Route component={About} pattern="about"/>
     </Router>
   </section>
   <Footer/>
