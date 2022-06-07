@@ -1,9 +1,20 @@
 <script>
-    import { GoTo, Icon, Link } from '../../cdk';
+    import { GoTo } from '../../cdk';
 </script>
 
-<GoTo to="config">Config</GoTo>
-<Link href="https://github.com/anthonylegoas/is-this-svelte">
-    <Icon name="chevron-right" size="55"/>
-    More about the extension
-</Link>
+<ul>
+    <li>
+        <GoTo to="config">Config</GoTo>
+    </li>
+    <li>
+        <GoTo to="about">About</GoTo>
+    </li>
+</ul>
+
+<style>
+    ul, li {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+</style>
