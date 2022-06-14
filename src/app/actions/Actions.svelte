@@ -2,14 +2,16 @@
     import { GoTo } from '../../cdk';
 </script>
 
-<ul>
-    <li>
-        <GoTo to="config">Config</GoTo>
-    </li>
-    <li>
-        <GoTo to="about">About</GoTo>
-    </li>
-</ul>
+<nav>
+    <ul>
+        <li>
+            <GoTo to="config">Config</GoTo>
+        </li>
+        <li>
+            <GoTo to="about">About</GoTo>
+        </li>
+    </ul>
+</nav>
 
 <style>
     ul, li {
