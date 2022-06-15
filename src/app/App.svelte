@@ -7,8 +7,8 @@
   import { Router, Route } from '../cdk';
 </script>
 
+<Header/>
 <main>
-  <Header/>
   <section>
     <Router>
       <Route component={Actions} pattern="home"/>
