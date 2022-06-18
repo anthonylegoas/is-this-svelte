@@ -20,7 +20,7 @@
 	{...$$restProps}
 >
 	<slot />
-	<Icon name="chevron-right" size="30"/>
+	<Icon name="chevron-right" size="16"/>
 </button>
 
 <style>
