@@ -24,10 +24,16 @@
 </script>
 
 {#if routeMustBeDisplayed}
-	<div
+	<section
 		in:fly={{ delay: 300, duration: 500, x: 500 * leftOrRight, opacity: 0 }}
 		out:fly={{ delay: 0, duration: 280, x: -500 * leftOrRight, opacity: 0 }}
 	>
 		<svelte:component this={component} />
-	</div>
+	</section>
 {/if}
+
+<style>
+	section {
+		width: 100%;
+	}
+</style>
