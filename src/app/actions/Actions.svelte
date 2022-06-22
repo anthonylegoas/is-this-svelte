@@ -14,7 +14,8 @@
 </nav>
 
 <style>
-    ul, li {
+
+    nav, ul, li {
         width: 100%;
         padding: 0;
         margin: 0;
