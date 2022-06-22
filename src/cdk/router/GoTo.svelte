@@ -19,8 +19,8 @@
 	data-testid="go-to__button"
 	{...$$restProps}
 >
-	<slot />
-	<Icon name="chevron-right" size="16"/>
+	<span><slot /></span>
+	<Icon name="chevron-right" size="12"/>
 </button>
 
 <style>
@@ -35,7 +35,6 @@
         border-radius: 4px;
         transition: all 0.2s ease-in-out;
         cursor: pointer;
-
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
