@@ -12,6 +12,7 @@
 
 <style>
     header {
+        height: 33%;
         display: flex;
         flex-direction: column;
         align-items: center;
