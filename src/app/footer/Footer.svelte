@@ -8,6 +8,7 @@
 
 <style>
     footer {
+        bottom: 0;
         width: 100%;
         border-top: 1px solid #ddd;
         padding-top: 0.5rem;
