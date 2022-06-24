@@ -5,10 +5,10 @@
 <nav>
     <ul>
         <li>
-            <GoTo to="config">Config</GoTo>
+            <GoTo emoji="⚙️" to="config">Configure</GoTo>
         </li>
         <li>
-            <GoTo to="about">About</GoTo>
+            <GoTo emoji="ℹ️" to="about">About</GoTo>
         </li>
     </ul>
 </nav>
