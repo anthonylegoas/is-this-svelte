@@ -7,6 +7,10 @@
 	 */
 	export let comesFrom = 'right';
 	/**
+	 * The emoji to display.
+	 */
+	export let emoji = null;
+	/**
 	 * The route on which to nagivate.
 	 */
 	export let to;
@@ -19,6 +23,7 @@
 	data-testid="go-to__button"
 	{...$$restProps}
 >
+	<span>{emoji}</span>
 	<span><slot /></span>
 	<Icon name="chevron-right" size="12"/>
 </button>
@@ -30,8 +35,8 @@
 		border: none;
         color: var(--color-primary);
         font-size: 0.75rem;
-        max-width: 15em;
         padding: 0.5rem 1rem;
+		margin: 0;
         border-radius: 4px;
         transition: all 0.2s ease-in-out;
         cursor: pointer;
@@ -41,6 +46,6 @@
     }
 
     button:hover {
-        text-decoration: underline;
+		background-color: rgba(255, 62, 0, .1);
     }
 </style>
