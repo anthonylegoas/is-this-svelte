@@ -21,11 +21,13 @@
 
 <style>
   main {
+    height: 66%;
     width: 200px;
-    padding: 1rem;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-between;
+    justify-content: space-between;
   }
 
   section {
