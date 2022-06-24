@@ -2,6 +2,12 @@
     <!-- wrapper div allows use of innerHTML -->
     <!-- icons from https://thenounproject.com/khuzema/collection/blobby-icon-set/ -->
     <svg>
+        <symbol viewBox="-100 100 620 1" fill="none" id="chevron-left" class="icon" preserveAspectRatio="preserveAspectRatio=“xMaxYMax">
+            <path stroke-width="100" transform="rotate(180 180 180)" d="M388.819,239.537L156.092,6.816c-9.087-9.089-23.824-9.089-32.912,0.002
+            c-9.087,9.089-9.087,23.824,0.002,32.912l216.27,216.266L123.179,472.272c-9.087,9.089-9.087,23.824,0.002,32.912
+            c4.543,4.544,10.499,6.816,16.455,6.816c5.956,0,11.913-2.271,16.457-6.817L388.819,272.45c4.366-4.364,6.817-10.283,6.817-16.455
+            C395.636,249.822,393.185,243.902,388.819,239.537z" fill="currentColor"/>    
+        </symbol>
         <symbol viewBox="-100 240 620 1" fill="none" id="chevron-right" class="icon" preserveAspectRatio="preserveAspectRatio=“xMaxYMax">
             <path stroke-width="100" d="M388.819,239.537L156.092,6.816c-9.087-9.089-23.824-9.089-32.912,0.002
             c-9.087,9.089-9.087,23.824,0.002,32.912l216.27,216.266L123.179,472.272c-9.087,9.089-9.087,23.824,0.002,32.912
