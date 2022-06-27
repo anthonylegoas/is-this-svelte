@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-  Made with ❤️ by <a href="https://github.com/anthonylegoas">@anthonylegoas</a>
+  <p>v1.0.0</p>
 </footer>
 
 <style>
