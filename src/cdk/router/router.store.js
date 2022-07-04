@@ -21,7 +21,7 @@ const goTo = (path, comesFrom = "right") =>
     return [...value, { path, comesFrom }];
   });
 
-const routePath = ["home", "config", "about"];
+const routePath = ["home", "config", "websites", "about"];
 
 /**
  * Allow to navigate to the route before current one.
